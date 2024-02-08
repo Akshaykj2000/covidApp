@@ -18,4 +18,11 @@ router.get("/view",async(req,res) =>{
     res.json(data)
 })
 
+router.post("/patiant_search", async(req,res)=>{
+        let input=req.body
+        let data =await PatientSchema.find(input)
+        res.json(data)
+
+})
+
 module.exports=router
